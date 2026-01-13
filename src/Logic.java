@@ -6,10 +6,10 @@ public class Logic {
         this.scan = scan;
     }
 
-    int numOfPlayers = 0;
-    String username = "";
-    List<Player> playerList = new ArrayList<>();
-    Player currentPlayer;
+    private int numOfPlayers = 0;
+    private String username = "";
+    private List<Player> playerList = new ArrayList<>();
+    private Player currentPlayer;
 
     public void logic() {
         boolean next = false;
