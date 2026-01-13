@@ -2,16 +2,18 @@ import java.util.*;
 
 public class Logic {
     private Scanner scan;
-    int numOfPlayers = 0;
-    String username = "";
-    List<Player> playerList = new ArrayList<>();
     public Logic(Scanner scan) {
         this.scan = scan;
     }
+
+    int numOfPlayers = 0;
+    String username = "";
+    List<Player> playerList = new ArrayList<>();
     Player currentPlayer;
 
     public void logic() {
         boolean next = false;
+
         while (numOfPlayers == 0 || !next) {
             System.out.println("Would you like to create a new account? (Enter 1) (Otherwise type anything else)");
             if (scan.nextLine().equals("1")) {
