@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Logic {
@@ -8,8 +9,10 @@ public class Logic {
     }
 
     public void start() {
-        System.out.println("Would you like to create a new account? (Enter 1) (Otherwise anything else)");
+        System.out.println("Would you like to create a new account? (Enter 1) (Otherwise type anything else)");
         if (scan.nextLine().equals("1")) {
+            Player
+
         }
     }
 }
