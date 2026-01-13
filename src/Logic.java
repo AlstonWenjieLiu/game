@@ -18,10 +18,7 @@ public class Logic {
                 numOfPlayers++;
                 System.out.print("Enter your username: ");
                 username = scan.nextLine();
-
-                for (int i = 1; i <= numOfPlayers; i++) {
-                    playerList.add(new Player(scan, i, username));
-                }
+                playerList.add(new Player(scan, numOfPlayers, username));
             } else {
                 next = true;
             }
@@ -39,15 +36,25 @@ public class Logic {
                 System.out.print(", ");
             }
         }
-        for (boolean validOption = false; validOption;) {
+
+        System.out.print("\nIndex: ");
+
+        boolean validOption = false;
+        while (!validOption) {
             String option = scan.nextLine();
             try {
                 int opt = Integer.parseInt(option);
                 currentPlayer = playerList.get(opt);
-            } catch(Exception e) {
-                System.out.println("Invalid input.");
+                validOption = true;
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Please enter an index within bound.");
+            } catch (NumberFormatException e) {
+                System.out.println("This is not a number, or it might not be in the right format (it should be \"6\" or \"7\".");
             }
         }
+
+        System.out.println("Logging in...\n");
+        System.out.println("Hello " + currentPlayer.getUsername() + "!");
     }
 
     //helper methods
