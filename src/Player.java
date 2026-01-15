@@ -6,16 +6,18 @@ public class Player {
     private int numOfPlayers = 0;
     private int playerNumber;
     private String username;
+    private Enemy enemy;
 
     public Player(Scanner scan) {
         this.scan = scan;
     }
 
-    public Player(Scanner scan, int playerNum, String name) {
+    public Player(Scanner scan, int playerNum, String name, int enemyLevel) {
         this.scan = scan;
         numOfPlayers++;
         playerNumber = playerNum;
         username = name;
+        this.enemy = new Enemy(enemyLevel);
     }
 
     public Player(int playerNum, String name) {
