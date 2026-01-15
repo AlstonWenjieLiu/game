@@ -1,10 +1,19 @@
+import java.util.Scanner;
+
 public class Enemy {
+    //Dependencies
+    private Scanner scan;
+
     //instance variables
     private int level;
     private double health;
     private double strength;
 
     //Constructors
+    public Enemy(Scanner scan) {
+        this.scan = scan;
+    }
+
     public Enemy(int level) {
         this.level = level;
         health = level;

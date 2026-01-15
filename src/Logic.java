@@ -1,31 +1,35 @@
 import java.util.*;
 
 public class Logic {
-    private Scanner scan;
+    //Instance variables
+    private int accountCount = 0;
+    private String username = "";
+    private Player currentPlayer;
+    private List<Player> playerList = new ArrayList<>();
+
+    private final Scanner scan;
+
+    //Constructors
     public Logic(Scanner scan) {
         this.scan = scan;
     }
 
-    private int numOfPlayers = 0;
-    private String username = "";
-    private List<Player> playerList = new ArrayList<>();
-    private Player currentPlayer;
-
-    public void logic() {
+    //Methods
+    public void runLogic() {
         boolean next = false;
 
-        while (numOfPlayers == 0 || !next) {
+        while (accountCount == 0 || !next) {
             System.out.println("Would you like to create a new account? (Enter 1) (Otherwise type anything else)");
-            if (scan.nextLine().equals("1")) {
-                numOfPlayers++;
+            if ("1".equals(scan.nextLine())) {
+                accountCount++;
                 System.out.print("Enter your username: ");
                 username = scan.nextLine();
-                playerList.add(new Player(scan, numOfPlayers, username));
+                playerList.add(new Player(scan, accountCount, username));
             } else {
                 next = true;
             }
 
-            if (numOfPlayers == 0) {
+            if (accountCount == 0) {
                 System.out.println("\nYou must have at least one account!");
                 System.out.println("- - - - - - - - - - - - - - - -\n");
             }
@@ -60,4 +64,8 @@ public class Logic {
     }
 
     //helper methods
+
+
+    //Getters and setters
+    //hello im a getter!
 }

@@ -1,13 +1,16 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Player {
+    //Dependencies
     private Scanner scan;
+
+    //Instance variables
     private int numOfPlayers = 0;
     private int playerNumber;
     private String username;
     private Enemy enemy;
 
+    //Constructor
     public Player(Scanner scan) {
         this.scan = scan;
     }
@@ -34,6 +37,10 @@ public class Player {
         username = name;
     }
 
+    //Helper methods
+
+
+    //Getters and setters
     public int getNumOfPlayers() {
         return numOfPlayers;
     }
