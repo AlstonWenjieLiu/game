@@ -4,6 +4,7 @@ public class Enemy {
     private double health;
     private double strength;
 
+    //Constructors
     public Enemy(int level) {
         this.level = level;
         health = level;
@@ -14,6 +15,19 @@ public class Enemy {
         this.level = 1; //Default stats
         health = level;
         strength = level;
+    }
+
+    //Methods
+    public void announce() {
+        System.out.println("GRR!");
+        System.out.println("I'm level " + getLevel() + ", you'll never defeat me!");
+    }
+
+    public void getStats() {
+        System.out.println(" - - - Enemy Stats - - - ");
+        System.out.println("Level:" + getLevel());
+        System.out.println("Health:" + getHealth());
+        System.out.println("Strength: " + getStrength());
     }
 
     //Getters and setters

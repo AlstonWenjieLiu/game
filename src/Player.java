@@ -20,6 +20,14 @@ public class Player {
         this.enemy = new Enemy(enemyLevel);
     }
 
+    public Player(Scanner scan, int playerNum, String name) {
+        this.scan = scan;
+        numOfPlayers++;
+        playerNumber = playerNum;
+        username = name;
+        this.enemy = new Enemy();
+    }
+
     public Player(int playerNum, String name) {
         numOfPlayers++;
         playerNumber = playerNum;

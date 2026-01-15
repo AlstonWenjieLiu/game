@@ -51,7 +51,7 @@ public class Logic {
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Please enter an index within bound.");
             } catch (NumberFormatException e) {
-                System.out.println("This is not a number, or it might not be in the right format (it should be \"6\" or \"7\".");
+                System.out.println("This is not a number, or it might not be in the right format (it should be \"6\" or \"7\").");
             }
         }
 
