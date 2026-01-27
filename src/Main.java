@@ -12,6 +12,7 @@ public class Main {
         Player playerScanner = new Player(scan, 0, "stub");
         Enemy enemyScanner = new Enemy(scan);
         Logic LogicScanner = new Logic(scan);
+        Temperature temperatureScanner = new Temperature(scan);
 
         LogicScanner.runLogic();
         scan.close();
