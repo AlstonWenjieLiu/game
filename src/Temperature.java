@@ -24,12 +24,12 @@ public class Temperature {
         }
     }
 
-    public double convertCtoF(double temp) {
+    public static double convertCtoF(double temp) {
         double fahrenheit = temp * 9 / 5 + 32;
         return fahrenheit;
     }
 
-    public double convertFtoC(double temp) {
+    public static double convertFtoC(double temp) {
         double celsius = (temp - 32) * 5 / 9;
         return celsius;
     }

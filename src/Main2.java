@@ -36,14 +36,16 @@ public class Main2 {
 
         // 5. use your static convertCtoF method to convert 12.6
         //   to Fahrenheit; print the returned result
-
+        double fahrenheitTemp = Temperature.convertCtoF(12.6);
+        System.out.println(fahrenheitTemp);
 
 
 
         // --- test instance methods ---
         // 6. change temp1 to Celcius using changeToC,
         // then print the string returned by tempInfo()
-
+        temp1.changeToC();
+        System.out.println(temp1.tempInfo());
 
 
 
@@ -51,11 +53,14 @@ public class Main2 {
         // changeToC a second time.
         // then print the string returned by tempInfo() to show
         // that nothing happens since it is already C
-
+        temp1.changeToC();
+        System.out.println(temp1.tempInfo());
 
 
         // 8. change temp1 back to Fahrenheit using changeToF,
         // then print the string returned by tempInfo()
+        temp1.changeToF();
+        System.out.println(temp1.tempInfo());
 
 
 
@@ -64,5 +69,8 @@ public class Main2 {
         // changeToF a second time.
         // then print the string returned by tempInfo() to show
         // that nothing happens since it is already F
+        temp1.changeToF();
+        System.out.println(temp1.tempInfo());
+
     }
 }
